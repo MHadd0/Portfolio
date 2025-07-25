@@ -15,20 +15,21 @@ const About = () => {
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-3xl font-Ovo'>
-            Matthew is a self-driven and results-oriented individual with a passion for data science and applying data science techniques to solve complex problems in chemistry. 
+            Matthew is a self-driven and results-oriented individual with a passion for data science and applying data science techniques to solve complex problems in chemistry.
             His academic background includes a B.Sc. in Chemistry focused on computational chemistry research,
             and he is currently pursuing a Master's degree in Data Science and Analytics. <br /> <br />
-            Beyond academics, his dedication to music is evident in his 10+ years of experience playing the cello. 
-            This experience has instilled in him a deep appreciation for precision and perseverance. An individual with a strong inquisitiveness, 
-            he thrives on challenges and enjoys delving into research projects. He cultivates a collaborative spirit by actively building strong connections with colleagues and collaborators, 
+            Beyond academics, his dedication to music is evident in his 10+ years of experience playing the cello.
+            This experience has instilled in him a deep appreciation for precision and perseverance. An individual with a strong inquisitiveness,
+            he thrives on challenges and enjoys delving into research projects. He cultivates a collaborative spirit by actively building strong connections with colleagues and collaborators,
             fostering a positive and productive work environment.
           </p>
 
           <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-3xl'>
-            {infoList.map(({icon, iconDark, title, description}, index) => (
-              <li 
-                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer 
-                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500 hover:shadow-black' 
+            {infoList.map(({ icon, iconDark, title, description }, index) => (
+              <li
+                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
+                active:bg-[var(--lightHover)] active:-translate-y-1 active:shadow-black
+                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500 hover:shadow-black'
                 key={index}
               >
                 <Image src={icon} alt={title} className='w-7 mt-3' />
@@ -38,29 +39,41 @@ const About = () => {
             ))}
           </ul>
 
- 
-          <div className='relative w-full max-w-sm mx-left mt-10'> 
-            <Image 
-              src={tools_frame} 
-              alt='Tools Frame' 
-              className='absolute top-0 left-0 w-full h-full z-0 pointer-events-none object-contain' 
+          {/* Tools Section Start */}
+          <div className='relative w-full max-w-sm mx-left mt-10'>
+            <Image
+              src={tools_frame}
+              alt='Tools Frame'
+              className='absolute top-0 left-0 w-full h-full
+               z-0 pointer-events-none object-contain hidden sm:block'
             />
 
-            <div className='relative z-10 px-4 py-8 sm:px-6 sm:py-8 text-right'> 
-              <h4 className='mb-4 text-gray-700 font-Ovo font-semibold text-left text-lg'>Tools I Use</h4> 
-              <ul className='flex flex-wrap justify-left gap-5 sm:gap-5 mt-15'>
+            {/* Content for Tools I Use */}
+            {/* Adjust padding for the content container */}
+            <div className='relative z-10 px-4 pt-4 pb-8 sm:px-6 sm:pt-6 sm:pb-8'>
+              {/* Adjust heading position using responsive classes */}
+              <h4 className='font-Ovo font-semibold text-lg text-gray-700 absolute
+                             top-4 left-6
+                             sm:top-5 sm:left-5'> {/* Adjust these values as needed for your frame */}
+                Tools I Use
+              </h4>
+              {/* Adjust ul (tools list) position and justification */}
+              <ul className='flex flex-wrap justify-center gap-4
+                             pt-14 sm:pt-20 {/* Adjust padding-top for mobile vs desktop */}
+                             sm:justify-start sm:gap-5'> {/* Align left on sm and larger */}
                 {toolsData.map((tool, index) => (
-                  <li 
+                  <li
                     key={index}
-                    className='mt-2 flex items-center justify-center w-12 sm:w-14 aspect-square 
+                    className='flex items-center justify-center w-12 sm:w-14 aspect-square
                     cursor-pointer hover:-translate-y-1 duration-500'
                   >
-                    <Image src={tool} alt='Tool' className='w-5 sm:w-7' />
+                    <Image src={tool} alt='Tool' className='w-6 sm:w-8' />
                   </li>
                 ))}
               </ul>
             </div>
           </div>
+          {/* Tools Section End */}
         </div>
       </div>
     </div>
