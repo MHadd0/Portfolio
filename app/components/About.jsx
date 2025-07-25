@@ -1,5 +1,5 @@
 import React from 'react';
-import indeed2_removebg from '@/assets/indeed2-removebg.png';
+import matthew_portrait from '@/assets/matthew_portrait.jpg';
 import { assets, infoList, toolsData } from '@/assets/assets';
 import Image from 'next/image';
 import tools_frame from '@/assets/tools_frame.png';
@@ -11,7 +11,7 @@ const About = () => {
 
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
         <div className='w-64 sm:w-80 rounded-3xl max-w-none'>
-          <Image src={indeed2_removebg} alt='user' className='w-full rounded-3xl' />
+          <Image src={matthew_portrait} alt='user' className='w-full rounded-3xl' />
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-3xl font-Ovo'>
