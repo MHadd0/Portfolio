@@ -27,11 +27,9 @@ const About = () => {
           <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-3xl'>
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
-                className='border-[0.5px] border-gray-400 dark:border-[var(--border)] rounded-xl p-6 cursor-pointer
-                active:bg-[var(--lightHover)] active:-translate-y-1 active:shadow-[var(--shadow-black)]
-                dark:active:bg-[var(--darkHover)] dark:hover:bg-[var(--darkHover)]
-                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500
-                hover:shadow-[var(--shadow-black)] dark:hover:shadow-[var(--shadow-white)]'
+                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
+                active:-translate-y-1 active:shadow-[var(--text)]
+                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500'
                 key={index}
               >
                 <Image src={icon} alt={title} className='w-7 mt-3' />

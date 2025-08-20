@@ -6,6 +6,9 @@
   --color-light-hover: var(--lightHover);
   --color-dark-hover: var(--darkHover);
   --color-border: var(--border);
+  --color-dark-Hover: var(--darkHover);
+  --color-dark-Shadow: var(--darkShadow);
+  --color-light-Shadow: var(--lightShadow);
 }
 
 
@@ -13,6 +16,7 @@
   --background: #fff;
   --text: #000;
   --lightHover: #DBEAFE;
+  --lightShadow: #000; 
 }
 
 .dark {
@@ -20,6 +24,7 @@
   --text: #fff;
   --darkHover: #9ca2aa;
   --border: #425f8b; 
+  --darkShadow: #425f8b;
 }
 
 * {
