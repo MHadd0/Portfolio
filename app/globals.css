@@ -1,23 +1,13 @@
 @import "tailwindcss";
 
-* {
-  font-family: Outfit;
-}
-
 @theme {
-  --color-lightHover: var(--lightHover)
-  --color-background: var(--background)
-  --color-text:       var(--text)
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #020d1c;
-
-  --font-outfit: "Outfit", sans-serif;
-  --font-ovo: "Ovo", serif;
-
-  --shadow-black: 4px 4px 0 #000;
-  --shadow-white: 4px 4px 0 #fff
-
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-light-hover: var(--lightHover);
+  --color-dark-hover: var(--darkHover);
+  --color-border: var(--border);
 }
+
 
 :root {
   --background: #fff;
@@ -28,6 +18,15 @@
 .dark {
   --background: #020d1c;
   --text: #fff;
-  --lightHover: #DBEAFE;
+  --darkHover: #9ca2aa;
+  --border: #425f8b; 
 }
 
+* {
+  font-family: var(--font-outfit);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}

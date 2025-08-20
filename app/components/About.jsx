@@ -27,14 +27,16 @@ const About = () => {
           <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-3xl'>
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
-                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
-                active:bg-[var(--lightHover)] active:-translate-y-1 active:shadow-black
-                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500 hover:shadow-black'
+                className='border-[0.5px] border-gray-400 dark:border-[var(--border)] rounded-xl p-6 cursor-pointer
+                active:bg-[var(--lightHover)] active:-translate-y-1 active:shadow-[var(--shadow-black)]
+                dark:active:bg-[var(--darkHover)] dark:hover:bg-[var(--darkHover)]
+                hover:bg-[var(--lightHover)] hover:-translate-y-1 duration-500
+                hover:shadow-[var(--shadow-black)] dark:hover:shadow-[var(--shadow-white)]'
                 key={index}
               >
                 <Image src={icon} alt={title} className='w-7 mt-3' />
-                <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-                <p className='text-gray-600 text-sm'>{description}</p>
+                <h3 className='my-4 font-semibold text-gray-700 dark:text-[var(--text)]'>{title}</h3>
+                <p className='text-gray-600 text-sm dark:text-[var(--text)]'>{description}</p>
               </li>
             ))}
           </ul>
@@ -47,27 +49,26 @@ const About = () => {
               className='absolute top-0 left-0 w-full h-full
                z-0 pointer-events-none object-contain hidden sm:block'
             />
-
-            {/* Content for Tools I Use */}
-            {/* Adjust padding for the content container */}
             <div className='relative z-10 px-4 pt-4 pb-8 sm:px-6 sm:pt-6 sm:pb-8'>
-              {/* Adjust heading position using responsive classes */}
+              
               <h4 className='font-Ovo font-semibold text-lg text-gray-700 absolute
                              top-4 left-6
-                             sm:top-5 sm:left-5'> {/* Adjust these values as needed for your frame */}
+                             sm:top-5 sm:left-5 dark:text-[var(--text)]'> 
                 Tools I Use
               </h4>
-              {/* Adjust ul (tools list) position and justification */}
+              
               <ul className='flex flex-wrap justify-center gap-4
                              pt-14 sm:pt-20 {/* Adjust padding-top for mobile vs desktop */}
-                             sm:justify-start sm:gap-5'> {/* Align left on sm and larger */}
-                {toolsData.map((tool, index) => (
-                  <li
-                    key={index}
-                    className='flex items-center justify-center w-12 sm:w-14 aspect-square
-                    cursor-pointer hover:-translate-y-1 duration-500'
-                  >
-                    <Image src={tool} alt='Tool' className='w-6 sm:w-8' />
+                             sm:justify-start sm:gap-5'> 
+            {toolsData.map((tool, index) => (
+              <li
+              key={index}
+              className='flex items-center justify-center w-12 sm:w-14 aspect-square
+              cursor-pointer hover:-translate-y-1 duration-500'
+    >
+                    <div className='flex items-center justify-center w-8 h-8 rounded-md dark:bg-[var(--darkHover)]'>
+                      <Image src={tool} alt='Tool' className='w-6 sm:w-8' />
+                    </div>
                   </li>
                 ))}
               </ul>

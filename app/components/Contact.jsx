@@ -38,17 +38,17 @@ const Contact = () => {
 
     return (
         <div id="contact" className="w-full px-[12%] py-20 scroll-mt-20">
-            <h2 className='mb-20 text-center text-5xl font-Ovo'>Contact Me</h2>
+            <h2 className='mb-20 text-center text-5xl font-Ovo dark:text-[var(--text)]'>Contact Me</h2>
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap -mx-4">
                  
                     <div className="contact-left w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
                         <h1 className="sub-title text-4xl font-semibold text-white mb-6">Contact Me</h1>
-                        <p className="flex items-center mb-4 text-gray-900">
-                            <FontAwesomeIcon icon={faPaperPlane} className="text-blue-800 mr-4 cursor-pointer hover:-translate-y-1 duration-500" />
+                        <p className="flex items-center mb-4 text-gray-900 dark:text-[var(--text)]">
+                            <FontAwesomeIcon icon={faPaperPlane} className="text-blue-800 mr-4 cursor-pointer hover:-translate-y-1 duration-500 " />
                             matthewhaddad1234@gmail.com
                         </p>
-                        <p className="flex items-center mb-4 text-gray-900">
+                        <p className="flex items-center mb-4 text-gray-900 dark:text-[var(--text)]">
                             <FontAwesomeIcon icon={faPhone} className="text-blue-800 mr-4 cursor-pointer hover:-translate-y-1 duration-500" />
                             +1 (587) 896-2562
                         </p>
