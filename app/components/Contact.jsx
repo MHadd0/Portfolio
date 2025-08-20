@@ -43,7 +43,6 @@ const Contact = () => {
                 <div className="flex flex-wrap -mx-4">
                  
                     <div className="contact-left w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                        <h1 className="sub-title text-4xl font-semibold text-white mb-6">Contact Me</h1>
                         <p className="flex items-center mb-4 text-gray-900 dark:text-[var(--text)]">
                             <FontAwesomeIcon icon={faPaperPlane} className="text-blue-800 mr-4 cursor-pointer hover:-translate-y-1 duration-500 " />
                             matthewhaddad1234@gmail.com
